@@ -30,5 +30,43 @@ This repository is used to practice the labs from Prof. Chen-Yi Lee's IC Design 
 * Lab11 - Template Matching with Image Processing (TMIP) : [[spec](./Labs/Lab11/Lab11_Exercise.pdf)]
 * Lab12 - Knight’s Tour APRII : [[spec](./Labs/Lab12/Lab12_Exercise.pdf)]
 
-## Reference
-* 2021-Fall IC Design Lab (ICLAB) : [link](https://www.lhlaib.com/course/2021-fall-iclab)
+## Usage
+```shell
+# RTL & Verification
+$ make irun_rtl
+
+# Install Python3 thirdparty library (Optional)
+$ pip3 install -r requirements.txt
+
+# Use Python3 to generate custom testcase (Optional)
+$ python3 testdata_gen.py
+
+# RTL & Verification with custom testcase
+$ make irun_rtl_cust
+
+# Synthesis & STA report
+$ make syn
+
+# Gate level simulation
+$ make irun_gate
+
+# Gate level simulation with custom testcase
+$ make irun_gate_cust
+
+# View waveform
+$ make nWave
+
+# Debug design and check critical path
+$ make verdi_rtl
+$ make verdi_gate
+
+# Clean output file
+$ make clean
+```
+
+## Tool Chain
+* Python3
+* Cadence irun
+* Synopsys Design Compiler
+    * cell : UMC 0.18µm
+* Synopsys Verdi
